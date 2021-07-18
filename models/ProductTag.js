@@ -9,17 +9,14 @@ ProductTag.init(
     // define columns
     id: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
-    },
-    product_id:  {
-      type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
-    tag_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    //ref id on product table
+    product_id: DataTypes.INTEGER,
+    //ref id from tag table
+    tag_id: DataTypes.INTEGER
 
   },
   {
